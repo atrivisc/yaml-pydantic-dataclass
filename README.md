@@ -10,8 +10,26 @@ pip install yaml-dataclass
 
 ## Usage
 
-```python
-from yaml_dataclass import core
+```yaml
+# config.yaml
+port: 8080
+debug: false
+```
 
-# Add example usage here
+```python
+from pydantic.dataclasses import dataclass
+from yaml_dataclass import YamlConfig
+
+@dataclass
+class AppConfig(YamlConfig):
+    __path__ = "app"
+    __config_file__ = "./config.yaml"
+
+    port: int
+    debug: bool
+
+if __name__ == '__main__':
+    config = AppConfig.read_config()
+    print(config.port)  # 8080
+    print(config.debug)  # False
 ```
