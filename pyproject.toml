@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yaml-dataclass"
+version = "0.1.0"
+authors = [
+  { name="atrivisc", email="atrivisc.shawl130@passmail.com" },
+]
+description = "A simple library to map YAML data into Python dataclasses"
+readme = "README.md"
+requires-python = ">=3.14"
+license = { file = "LICENSE" }
+keywords = ["yaml", "dataclass", "serialization", "parsing"]
+dependencies = [
+    "PyYAML>=6.0",
+    "pydantic>=2.0",
+    "cachetools>=5.0",
+    "jinja2>=3.0",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/atrivisc/yaml-dataclass"
+"Repository" = "https://github.com/atrivisc/yaml-dataclass.git"
+"Bug Tracker" = "https://github.com/atrivisc/yaml-dataclass/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
