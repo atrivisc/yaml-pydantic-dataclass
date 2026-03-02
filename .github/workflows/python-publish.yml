@@ -38,7 +38,7 @@ jobs:
 
     environment:
       name: pypi
-      url: https://pypi.org/p/yaml-dataclass
+      url: https://pypi.org/p/yaml-pydantic-dataclass
 
     steps:
       - name: Retrieve release distributions

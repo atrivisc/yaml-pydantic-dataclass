@@ -5,20 +5,21 @@ A simple Python library for mapping YAML data to Python dataclasses.
 ## Installation
 
 ```bash
-pip install yaml-dataclass
+pip install yaml-pydantic-dataclass
 ```
 
 ## Usage
 
 ```yaml
 # config.yaml
-port: 8080
-debug: false
+app:
+  port: 8080
+  debug: false
 ```
 
 ```python
 from pydantic.dataclasses import dataclass
-from yaml_dataclass import YamlConfig
+from yaml_pydantic_dataclass import YamlConfig
 
 @dataclass
 class AppConfig(YamlConfig):
