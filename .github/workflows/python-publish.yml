@@ -38,7 +38,7 @@ jobs:
 
     environment:
       name: pypi
-      url: https://pypi.org/p/
+      url: https://pypi.org/p/yaml-dataclass
 
     steps:
       - name: Retrieve release distributions
