@@ -4,13 +4,13 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "yaml-pydantic-dataclass"
-version = "0.1.1"
+version = "0.1.2"
 authors = [
   { name="atrivisc", email="atrivisc.shawl130@passmail.com" },
 ]
 description = "A simple library to map YAML data into Python dataclasses"
 readme = "README.md"
-requires-python = ">=3.14"
+requires-python = ">=3.12"
 license = { file = "LICENSE" }
 keywords = ["yaml", "dataclass", "serialization", "parsing"]
 dependencies = [
