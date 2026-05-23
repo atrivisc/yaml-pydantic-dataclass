@@ -1,7 +1,7 @@
 import io
 import os
 import yaml
-from typing import ClassVar, Any
+from typing import ClassVar, Any, Self
 from cachetools import TTLCache
 from abc import ABCMeta
 from pydantic.dataclasses import dataclass
