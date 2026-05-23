@@ -34,7 +34,7 @@ class YamlConfig(metaclass=ABCMeta):
         return cls(**loaded)
 
     @classmethod
-    def read_config(cls, config_path: str = None) -> Any:
+    def read_config(cls, config_path: str = None) -> Self:
         if config_path is None:
             config_path = cls.__config_file__
 
@@ -46,7 +46,7 @@ class YamlConfigCached(YamlConfig):
     __ttl_cache__: ClassVar[TTLCache] = TTLCache(maxsize=5, ttl=10)
 
     @classmethod
-    def read_config(cls, config_path: str = None) -> Any:
+    def read_config(cls, config_path: str = None) -> Self:
         if config_path is None:
             config_path = cls.__config_file__
 
